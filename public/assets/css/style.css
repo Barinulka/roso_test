@@ -1,0 +1,7 @@
+#alerts {
+    position: absolute;
+    z-index: 99;
+    right: 10px;
+    top: 10px;
+    transition: all 0.5s ease-out;
+}
