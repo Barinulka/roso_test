@@ -61,7 +61,7 @@ class EventController extends Controller
         $event->period_type = $period['type'];
         $event->save();
 
-        // ProcessEvent::dispatch($event);
+        ProcessEvent::dispatch($event);
         Cache::add(CacheKeys::eventById($event->id), $event, now()->addMinutes(5));
 
         return redirect()->route('home')->with('success', 'Событие успешно создано');
